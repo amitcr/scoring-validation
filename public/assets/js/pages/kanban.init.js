@@ -134,7 +134,7 @@ function ($) {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! D:\xampp\htdocs\scoring-validation\resources\js\pages\kanban.init.js */"./resources/js/pages/kanban.init.js");
+module.exports = __webpack_require__(/*! E:\xampp\htdocs\scoring-validation\resources\js\pages\kanban.init.js */"./resources/js/pages/kanban.init.js");
 
 
 /***/ })

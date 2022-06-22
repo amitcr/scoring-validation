@@ -32,7 +32,7 @@
                     </form>
                 </div>
             </li>
-
+            {{-- 
             <li class="dropdown d-none d-lg-block" data-toggle="tooltip" data-placement="left" title="Change language">
                 <a class="nav-link dropdown-toggle mr-0" data-toggle="dropdown" href="#" role="button"
                     aria-haspopup="false" aria-expanded="false">
@@ -203,6 +203,8 @@
                     </a>
                 </div>
             </li>
+            --}}
+            
         </ul>
     </div>
 </div>

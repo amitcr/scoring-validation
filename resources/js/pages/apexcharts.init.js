@@ -6,7 +6,7 @@ Website: https://coderthemes.com/
 Contact: support@coderthemes.com
 File: Apex Charts
 */
- 
+
 
 Apex = {
     chart: {
@@ -135,13 +135,13 @@ function generateData1(baseval1, count, yrange) {
                 curve: 'smooth'
             },
             series: [{
-                    name: "High - 2018",
-                    data: [28, 29, 33, 36, 32, 32, 33]
-                },
-                {
-                    name: "Low - 2018",
-                    data: [12, 11, 14, 18, 17, 13, 13]
-                }
+                name: "High - 2018",
+                data: [28, 29, 33, 36, 32, 32, 33]
+            },
+            {
+                name: "Low - 2018",
+                data: [12, 11, 14, 18, 17, 13, 13]
+            }
             ],
             grid: {
                 row: {
@@ -167,9 +167,6 @@ function generateData1(baseval1, count, yrange) {
                 }
             },
             yaxis: {
-                title: {
-                    text: 'Temperature'
-                },
                 min: 5,
                 max: 40,
             },
@@ -261,7 +258,7 @@ function generateData1(baseval1, count, yrange) {
                 hover: {
                     size: 7,
                 }
-                
+
             },
             yaxis: {
                 min: -10,
@@ -314,31 +311,31 @@ function generateData1(baseval1, count, yrange) {
                 enabled: false
             },
             stroke: {
-                width: [3,3, 3],
+                width: [3, 3, 3],
                 curve: 'smooth'
             },
             series: [{
-                    name: 'South',
-                    data: generateDayWiseTimeSeries(new Date('11 Feb 2019 GMT').getTime(), 20, {
-                        min: 10,
-                        max: 60
-                    })
-                },
-                {
-                    name: 'North',
-                    data: generateDayWiseTimeSeries(new Date('11 Feb 2019 GMT').getTime(), 20, {
-                        min: 10,
-                        max: 20
-                    })
-                },
+                name: 'South',
+                data: generateDayWiseTimeSeries(new Date('11 Feb 2019 GMT').getTime(), 20, {
+                    min: 10,
+                    max: 60
+                })
+            },
+            {
+                name: 'North',
+                data: generateDayWiseTimeSeries(new Date('11 Feb 2019 GMT').getTime(), 20, {
+                    min: 10,
+                    max: 20
+                })
+            },
 
-                {
-                    name: 'Central',
-                    data: generateDayWiseTimeSeries(new Date('11 Feb 2019 GMT').getTime(), 20, {
-                        min: 10,
-                        max: 15
-                    })
-                }
+            {
+                name: 'Central',
+                data: generateDayWiseTimeSeries(new Date('11 Feb 2019 GMT').getTime(), 20, {
+                    min: 10,
+                    max: 15
+                })
+            }
             ],
             legend: {
                 position: 'top',
@@ -549,7 +546,7 @@ function generateData1(baseval1, count, yrange) {
         //
         // Bar Chart - 1
         //
-        
+
         var options2 = {
             chart: {
                 height: 380,
@@ -575,7 +572,7 @@ function generateData1(baseval1, count, yrange) {
             document.querySelector("#apex-bar-1"),
             options2
         );
-        
+
         chart.render();
 
         //
@@ -602,13 +599,13 @@ function generateData1(baseval1, count, yrange) {
                 enabled: false
             },
             series: [{
-                    name: 'Males',
-                    data: [0.4, 0.65, 0.76, 0.88, 1.5, 2.1, 2.9, 3.8, 3.9, 4.2, 4, 4.3, 4.1, 4.2, 4.5, 3.9, 3.5, 3]
-                },
-                {
-                    name: 'Females',
-                    data: [-0.8, -1.05, -1.06, -1.18, -1.4, -2.2, -2.85, -3.7, -3.96, -4.22, -4.3, -4.4, -4.1, -4, -4.1, -3.4, -3.1, -2.8]
-                }
+                name: 'Males',
+                data: [0.4, 0.65, 0.76, 0.88, 1.5, 2.1, 2.9, 3.8, 3.9, 4.2, 4, 4.3, 4.1, 4.2, 4.5, 3.9, 3.5, 3]
+            },
+            {
+                name: 'Females',
+                data: [-0.8, -1.05, -1.06, -1.18, -1.4, -2.2, -2.85, -3.7, -3.96, -4.22, -4.3, -4.4, -4.1, -4, -4.1, -3.4, -3.1, -2.8]
+            }
             ],
             grid: {
                 xaxis: {
@@ -692,16 +689,16 @@ function generateData1(baseval1, count, yrange) {
                 size: 0
             },
             yaxis: [{
-                    title: {
-                        text: 'Series A',
-                    },
+                title: {
+                    text: 'Series A',
                 },
-                {
-                    opposite: true,
-                    title: {
-                        text: 'Series B',
-                    },
+            },
+            {
+                opposite: true,
+                title: {
+                    text: 'Series B',
                 },
+            },
             ],
             tooltip: {
                 shared: true,
@@ -725,7 +722,7 @@ function generateData1(baseval1, count, yrange) {
         );
 
         chart.render();
-        
+
         //
         // Mixed Chart - 2
         //
@@ -852,59 +849,59 @@ function generateData1(baseval1, count, yrange) {
                 categories: [2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016],
             },
             yaxis: [{
-                    axisTicks: {
-                        show: true,
-                    },
-                    axisBorder: {
-                        show: true,
-                        color: '#675db7'
-                    },
-                    labels: {
-                        style: {
-                            color: '#675db7',
-                        }
-                    },
-                    title: {
-                        text: "Income (thousand crores)"
-                    },
+                axisTicks: {
+                    show: true,
                 },
-
-                {
-                    axisTicks: {
-                        show: true,
-                    },
-                    axisBorder: {
-                        show: true,
-                        color: '#23b397'
-                    },
-                    labels: {
-                        style: {
-                            color: '#23b397',
-                        },
-                        offsetX: 10
-                    },
-                    title: {
-                        text: "Operating Cashflow (thousand crores)",
-                    },
+                axisBorder: {
+                    show: true,
+                    color: '#675db7'
                 },
-                {
-                    opposite: true,
-                    axisTicks: {
-                        show: true,
-                    },
-                    axisBorder: {
-                        show: true,
-                        color: '#e36498'
-                    },
-                    labels: {
-                        style: {
-                            color: '#e36498',
-                        }
-                    },
-                    title: {
-                        text: "Revenue (thousand crores)"
+                labels: {
+                    style: {
+                        color: '#675db7',
                     }
                 },
+                title: {
+                    text: "Income (thousand crores)"
+                },
+            },
+
+            {
+                axisTicks: {
+                    show: true,
+                },
+                axisBorder: {
+                    show: true,
+                    color: '#23b397'
+                },
+                labels: {
+                    style: {
+                        color: '#23b397',
+                    },
+                    offsetX: 10
+                },
+                title: {
+                    text: "Operating Cashflow (thousand crores)",
+                },
+            },
+            {
+                opposite: true,
+                axisTicks: {
+                    show: true,
+                },
+                axisBorder: {
+                    show: true,
+                    color: '#e36498'
+                },
+                labels: {
+                    style: {
+                        color: '#e36498',
+                    }
+                },
+                title: {
+                    text: "Revenue (thousand crores)"
+                }
+            },
 
             ],
             tooltip: {
@@ -957,26 +954,26 @@ function generateData1(baseval1, count, yrange) {
                 enabled: false
             },
             series: [{
-                    name: 'Bubble 1',
-                    data: generateData(new Date('11 Feb 2017 GMT').getTime(), 20, {
-                        min: 10,
-                        max: 60
-                    })
-                },
-                {
-                    name: 'Bubble 2',
-                    data: generateData(new Date('11 Feb 2017 GMT').getTime(), 20, {
-                        min: 10,
-                        max: 60
-                    })
-                },
-                {
-                    name: 'Bubble 3',
-                    data: generateData(new Date('11 Feb 2017 GMT').getTime(), 20, {
-                        min: 10,
-                        max: 60
-                    })
-                }
+                name: 'Bubble 1',
+                data: generateData(new Date('11 Feb 2017 GMT').getTime(), 20, {
+                    min: 10,
+                    max: 60
+                })
+            },
+            {
+                name: 'Bubble 2',
+                data: generateData(new Date('11 Feb 2017 GMT').getTime(), 20, {
+                    min: 10,
+                    max: 60
+                })
+            },
+            {
+                name: 'Bubble 3',
+                data: generateData(new Date('11 Feb 2017 GMT').getTime(), 20, {
+                    min: 10,
+                    max: 60
+                })
+            }
             ],
             fill: {
                 opacity: 0.8,
@@ -1018,33 +1015,33 @@ function generateData1(baseval1, count, yrange) {
                 enabled: false
             },
             series: [{
-                    name: 'Product 1',
-                    data: generateData1(new Date('11 Feb 2017 GMT').getTime(), 20, {
-                        min: 10,
-                        max: 60
-                    })
-                },
-                {
-                    name: 'Product 2',
-                    data: generateData1(new Date('11 Feb 2017 GMT').getTime(), 20, {
-                        min: 10,
-                        max: 60
-                    })
-                },
-                {
-                    name: 'Product 3',
-                    data: generateData1(new Date('11 Feb 2017 GMT').getTime(), 20, {
-                        min: 10,
-                        max: 60
-                    })
-                },
-                {
-                    name: 'Product 4',
-                    data: generateData1(new Date('11 Feb 2017 GMT').getTime(), 20, {
-                        min: 10,
-                        max: 60
-                    })
-                }
+                name: 'Product 1',
+                data: generateData1(new Date('11 Feb 2017 GMT').getTime(), 20, {
+                    min: 10,
+                    max: 60
+                })
+            },
+            {
+                name: 'Product 2',
+                data: generateData1(new Date('11 Feb 2017 GMT').getTime(), 20, {
+                    min: 10,
+                    max: 60
+                })
+            },
+            {
+                name: 'Product 3',
+                data: generateData1(new Date('11 Feb 2017 GMT').getTime(), 20, {
+                    min: 10,
+                    max: 60
+                })
+            },
+            {
+                name: 'Product 4',
+                data: generateData1(new Date('11 Feb 2017 GMT').getTime(), 20, {
+                    min: 10,
+                    max: 60
+                })
+            }
             ],
             fill: {
                 type: 'gradient',
@@ -1248,40 +1245,40 @@ function generateData1(baseval1, count, yrange) {
                 }
             },
             series: [{
-                    name: 'Team 1',
-                    data: generateDayWiseTimeSeries(new Date('11 Feb 2017 GMT').getTime(), 20, {
-                        min: 10,
-                        max: 60
-                    })
-                },
-                {
-                    name: 'Team 2',
-                    data: generateDayWiseTimeSeries(new Date('11 Feb 2017 GMT').getTime(), 20, {
-                        min: 10,
-                        max: 60
-                    })
-                },
-                {
-                    name: 'Team 3',
-                    data: generateDayWiseTimeSeries(new Date('11 Feb 2017 GMT').getTime(), 30, {
-                        min: 10,
-                        max: 60
-                    })
-                },
-                {
-                    name: 'Team 4',
-                    data: generateDayWiseTimeSeries(new Date('11 Feb 2017 GMT').getTime(), 10, {
-                        min: 10,
-                        max: 60
-                    })
-                },
-                {
-                    name: 'Team 5',
-                    data: generateDayWiseTimeSeries(new Date('11 Feb 2017 GMT').getTime(), 30, {
-                        min: 10,
-                        max: 60
-                    })
-                },
+                name: 'Team 1',
+                data: generateDayWiseTimeSeries(new Date('11 Feb 2017 GMT').getTime(), 20, {
+                    min: 10,
+                    max: 60
+                })
+            },
+            {
+                name: 'Team 2',
+                data: generateDayWiseTimeSeries(new Date('11 Feb 2017 GMT').getTime(), 20, {
+                    min: 10,
+                    max: 60
+                })
+            },
+            {
+                name: 'Team 3',
+                data: generateDayWiseTimeSeries(new Date('11 Feb 2017 GMT').getTime(), 30, {
+                    min: 10,
+                    max: 60
+                })
+            },
+            {
+                name: 'Team 4',
+                data: generateDayWiseTimeSeries(new Date('11 Feb 2017 GMT').getTime(), 10, {
+                    min: 10,
+                    max: 60
+                })
+            },
+            {
+                name: 'Team 5',
+                data: generateDayWiseTimeSeries(new Date('11 Feb 2017 GMT').getTime(), 30, {
+                    min: 10,
+                    max: 60
+                })
+            },
             ],
             dataLabels: {
                 enabled: false
@@ -1623,18 +1620,18 @@ function generateData1(baseval1, count, yrange) {
 
         chart.render();
     },
-    
-    //initializing
-    ApexChartPage.prototype.init = function () {
-        // charts
-        this.initCharts();
-    },
 
-    $.ApexChartPage = new ApexChartPage, $.ApexChartPage.Constructor = ApexChartPage
+        //initializing
+        ApexChartPage.prototype.init = function () {
+            // charts
+            this.initCharts();
+        },
+
+        $.ApexChartPage = new ApexChartPage, $.ApexChartPage.Constructor = ApexChartPage
 }(window.jQuery),
-//initializing main application module
-function ($) {
-    "use strict";
-    $.ApexChartPage.init();
-} (window.jQuery);
-    
+    //initializing main application module
+    function ($) {
+        "use strict";
+        $.ApexChartPage.init();
+    }(window.jQuery);
+

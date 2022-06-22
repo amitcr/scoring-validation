@@ -132,7 +132,7 @@ var transactionList = new List('transaction-list', {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! D:\xampp\htdocs\scoring-validation\resources\js\pages\table-listjs.init.js */"./resources/js/pages/table-listjs.init.js");
+module.exports = __webpack_require__(/*! E:\xampp\htdocs\scoring-validation\resources\js\pages\table-listjs.init.js */"./resources/js/pages/table-listjs.init.js");
 
 
 /***/ })

@@ -6,7 +6,7 @@
 
         <div class="media-body">
             <h6 class="pro-user-name mt-0 mb-0">Shreyu N</h6>
-            <span class="pro-user-desc">Administrator</span>
+            <span class="pro-user-desc">{{ Auth::user()->name}}</span>
         </div>
         <div class="dropdown align-self-center profile-dropdown-menu">
             <a class="dropdown-toggle mr-0" data-toggle="dropdown" href="#" role="button" aria-haspopup="false"
@@ -14,19 +14,9 @@
                 <span data-feather="chevron-down"></span>
             </a>
             <div class="dropdown-menu profile-dropdown">
-                <a href="/pages/profile" class="dropdown-item notify-item">
+                <a href="javascript:;" class="dropdown-item notify-item">
                     <i data-feather="user" class="icon-dual icon-xs mr-2"></i>
                     <span>My Account</span>
-                </a>
-
-                <a href="javascript:void(0);" class="dropdown-item notify-item">
-                    <i data-feather="settings" class="icon-dual icon-xs mr-2"></i>
-                    <span>Settings</span>
-                </a>
-
-                <a href="javascript:void(0);" class="dropdown-item notify-item">
-                    <i data-feather="help-circle" class="icon-dual icon-xs mr-2"></i>
-                    <span>Support</span>
                 </a>
 
                 <div class="dropdown-divider"></div>

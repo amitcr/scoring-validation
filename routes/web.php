@@ -1,5 +1,10 @@
 <?php
 
+use App\Http\Controllers\DashboardController;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Route;
+use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -17,6 +22,8 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/', 'RoutingController@index');
     Route::get('{first}/{second}/{third}', 'RoutingController@thirdLevel');
     Route::get('{first}/{second}', 'RoutingController@secondLevel');
-    Route::get('{any}', 'RoutingController@root');
 });
 
+Route::get('mis', [DashboardController::class,'mis']);
+Route::get('in', [DashboardController::class,'in']);
+Route::get('all', [DashboardController::class,'all']);

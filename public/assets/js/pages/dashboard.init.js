@@ -153,91 +153,7 @@ File: Dashboard init js
   var Dashboard = function Dashboard() {};
 
   Dashboard.prototype.initCharts = function () {
-    window.Apex = {
-      chart: {
-        parentHeightOffset: 0,
-        toolbar: {
-          show: false
-        }
-      },
-      grid: {
-        padding: {
-          left: 0,
-          right: 0
-        }
-      },
-      colors: ["#5369f8", "#43d39e", "#f77e53", "#ffbe0b"],
-      tooltip: {
-        theme: 'dark',
-        x: {
-          show: false
-        }
-      }
-    }; // 
-    // Stats
-    //
-
-    var options2 = {
-      chart: {
-        type: 'area',
-        height: 45,
-        width: 90,
-        sparkline: {
-          enabled: true
-        }
-      },
-      series: [{
-        data: [25, 66, 41, 85, 63, 25, 44, 12, 36, 9, 54]
-      }],
-      stroke: {
-        width: 2,
-        curve: 'smooth'
-      },
-      markers: {
-        size: 0
-      },
-      colors: ["#727cf5"],
-      tooltip: {
-        fixed: {
-          enabled: false
-        },
-        x: {
-          show: false
-        },
-        y: {
-          title: {
-            formatter: function formatter(seriesName) {
-              return '';
-            }
-          }
-        },
-        marker: {
-          show: false
-        }
-      },
-      fill: {
-        type: 'gradient',
-        gradient: {
-          type: "vertical",
-          shadeIntensity: 1,
-          inverseColors: false,
-          opacityFrom: 0.45,
-          opacityTo: 0.05,
-          stops: [45, 100]
-        }
-      }
-    };
-    new ApexCharts(document.querySelector("#today-revenue-chart"), options2).render();
-    new ApexCharts(document.querySelector("#today-product-sold-chart"), $.extend({}, options2, {
-      colors: ['#f77e53']
-    })).render();
-    new ApexCharts(document.querySelector("#today-new-customer-chart"), $.extend({}, options2, {
-      colors: ['#43d39e']
-    })).render();
-    new ApexCharts(document.querySelector("#today-new-visitors-chart"), $.extend({}, options2, {
-      colors: ['#ffbe0b']
-    })).render(); // ------------------- revenue chart
-
+    // ------------------- revenue chart
     function getDaysInMonth(month, year) {
       var date = new Date(year, month, 1);
       var days = [];
@@ -256,163 +172,164 @@ File: Dashboard init js
     }
 
     var now = new Date();
-    var labels = getDaysInMonth(now.getMonth(), now.getFullYear());
-    var options = {
-      chart: {
-        height: 296,
-        type: 'area'
-      },
-      dataLabels: {
-        enabled: false
-      },
-      stroke: {
-        curve: 'smooth',
-        width: 4
-      },
-      series: [{
-        name: 'Revenue',
-        data: [10, 20, 5, 15, 10, 20, 15, 25, 20, 30, 25, 40, 30, 50, 35]
-      }],
-      zoom: {
-        enabled: false
-      },
-      legend: {
-        show: false
-      },
-      colors: ['#43d39e'],
-      xaxis: {
-        type: 'string',
-        categories: labels,
-        tooltip: {
-          enabled: false
-        },
-        axisBorder: {
-          show: false
-        },
-        labels: {}
-      },
-      yaxis: {
-        labels: {
-          formatter: function formatter(val) {
-            return val + "k";
-          }
-        }
-      },
-      fill: {
-        type: 'gradient',
-        gradient: {
-          type: "vertical",
-          shadeIntensity: 1,
-          inverseColors: false,
-          opacityFrom: 0.45,
-          opacityTo: 0.05,
-          stops: [45, 100]
-        }
-      }
-    };
-    var chart = new ApexCharts(document.querySelector("#revenue-chart"), options);
-    chart.render();
-    /* ------------- target */
+    var labels = getDaysInMonth(now.getMonth(), now.getFullYear()); //
+    // Pie Chart -1
+    //
 
     var options = {
       chart: {
-        height: 296,
-        type: 'bar',
-        stacked: true,
-        toolbar: {
-          show: false
-        }
+        height: 320,
+        type: 'pie'
       },
-      plotOptions: {
-        bar: {
-          horizontal: false,
-          columnWidth: '45%'
-        }
-      },
-      dataLabels: {
-        enabled: false
-      },
-      stroke: {
-        show: true,
-        width: 2,
-        colors: ['transparent']
-      },
-      series: [{
-        name: 'Net Profit',
-        data: [35, 44, 55, 57, 56, 61]
-      }, {
-        name: 'Revenue',
-        data: [52, 76, 85, 101, 98, 87]
-      }],
-      xaxis: {
-        categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],
-        axisBorder: {
-          show: false
-        }
-      },
-      legend: {
-        show: false
-      },
-      grid: {
-        row: {
-          colors: ['transparent', 'transparent'],
-          // takes an array which will be repeated on columns
-          opacity: 0.2
-        },
-        borderColor: '#f3f4f7'
-      },
-      tooltip: {
-        y: {
-          formatter: function formatter(val) {
-            return "$ " + val + " thousands";
-          }
-        }
-      }
-    };
-    var chart = new ApexCharts(document.querySelector("#targets-chart"), options);
-    chart.render(); // sales by category --------------------------------------------------
-
-    var options = {
-      plotOptions: {
-        pie: {
-          donut: {
-            size: '70%'
-          },
-          expandOnClick: false
-        }
-      },
-      chart: {
-        height: 298,
-        type: 'donut'
-      },
+      series: [44, 55, 41, 17, 15, 55, 60, 100, 10, 26, 45],
+      labels: ["Executive", "Director", "Strategist", "Negotiator", "Relator", "Performer", "Inspector", "Harmonizer", "Instructor", "Diplomat", "Analyst"],
       legend: {
         show: true,
-        position: 'right',
-        horizontalAlign: 'left',
-        itemMargin: {
-          horizontal: 6,
-          vertical: 3
-        }
+        position: 'bottom',
+        horizontalAlign: 'center',
+        verticalAlign: 'middle',
+        floating: false,
+        fontSize: '14px',
+        offsetX: 0,
+        offsetY: -10
       },
-      series: [44, 55, 41, 17],
-      labels: ['Clothes 44k', 'Smartphons 55k', 'Electronics 41k', 'Other 17k'],
       responsive: [{
-        breakpoint: 480,
+        breakpoint: 600,
         options: {
+          chart: {
+            height: 240
+          },
           legend: {
-            position: 'bottom'
+            show: false
           }
         }
-      }],
-      tooltip: {
-        y: {
-          formatter: function formatter(value) {
-            return value + "k";
-          }
-        }
-      }
+      }]
     };
-    var chart = new ApexCharts(document.querySelector("#sales-by-category-chart"), options);
+    var chart = new ApexCharts(document.querySelector("#dashboard-pattern-chart"), options);
+    chart.render();
+    var options = {
+      chart: {
+        height: 320,
+        type: 'pie'
+      },
+      series: [44, 55],
+      labels: ["Matching", "Not Matching"],
+      legend: {
+        show: true,
+        position: 'bottom',
+        horizontalAlign: 'center',
+        verticalAlign: 'middle',
+        floating: false,
+        fontSize: '14px',
+        offsetX: 0,
+        offsetY: -10
+      },
+      responsive: [{
+        breakpoint: 600,
+        options: {
+          chart: {
+            height: 240
+          },
+          legend: {
+            show: false
+          }
+        }
+      }]
+    };
+    var chart = new ApexCharts(document.querySelector("#dashboard-matching-chart"), options);
+    chart.render();
+    var options = {
+      chart: {
+        height: 320,
+        type: 'pie'
+      },
+      series: [60, 55, 45],
+      labels: ["Red", "Orange", "Yellow"],
+      legend: {
+        show: true,
+        position: 'bottom',
+        horizontalAlign: 'center',
+        verticalAlign: 'middle',
+        floating: false,
+        fontSize: '14px',
+        offsetX: 0,
+        offsetY: -10
+      },
+      responsive: [{
+        breakpoint: 600,
+        options: {
+          chart: {
+            height: 240
+          },
+          legend: {
+            show: false
+          }
+        }
+      }]
+    };
+    var chart = new ApexCharts(document.querySelector("#mismatch-chart"), options);
+    chart.render();
+    var options = {
+      chart: {
+        height: 320,
+        type: 'pie'
+      },
+      series: [60, 33],
+      labels: ["DISC Strengths", "Four Temperaments"],
+      legend: {
+        show: true,
+        position: 'bottom',
+        horizontalAlign: 'center',
+        verticalAlign: 'middle',
+        floating: false,
+        fontSize: '14px',
+        offsetX: 0,
+        offsetY: -10
+      },
+      responsive: [{
+        breakpoint: 600,
+        options: {
+          chart: {
+            height: 240
+          },
+          legend: {
+            show: false
+          }
+        }
+      }]
+    };
+    var chart = new ApexCharts(document.querySelector("#platform-chart"), options);
+    chart.render();
+    var options = {
+      chart: {
+        height: 320,
+        type: 'pie'
+      },
+      series: [40, 45, 35, 30],
+      labels: ["Canada", "Usa", "United Kingdom", "South Africa"],
+      legend: {
+        show: true,
+        position: 'bottom',
+        horizontalAlign: 'center',
+        verticalAlign: 'middle',
+        floating: false,
+        fontSize: '14px',
+        offsetX: 0,
+        offsetY: -10
+      },
+      responsive: [{
+        breakpoint: 600,
+        options: {
+          chart: {
+            height: 240
+          },
+          legend: {
+            show: false
+          }
+        }
+      }]
+    };
+    var chart = new ApexCharts(document.querySelector("#country-chart"), options);
     chart.render();
   }, //initializing
   Dashboard.prototype.init = function () {
@@ -437,6 +354,76 @@ function ($) {
 
   $.Dashboard.init();
 }(window.jQuery);
+var options = {
+  chart: {
+    height: 380,
+    type: 'line',
+    zoom: {
+      enabled: false
+    },
+    toolbar: {
+      show: false
+    }
+  },
+  dataLabels: {
+    enabled: true
+  },
+  stroke: {
+    width: [3, 3],
+    curve: 'smooth'
+  },
+  series: [{
+    name: "High - 2022",
+    data: [4500, 4500, 5000, 4600, 5300, 5150, 5000, 15000, 10150, 9800, 9900, 2500]
+  }],
+  grid: {
+    row: {
+      colors: ['transparent', 'transparent'],
+      // takes an array which will be repeated on columns
+      opacity: 0.2
+    },
+    borderColor: '#e9ecef'
+  },
+  markers: {
+    style: 'inverted',
+    size: 6
+  },
+  xaxis: {
+    categories: ['Jul 2022', 'Aug 2022', 'Sept 2022', 'Oct 2022', 'Nov 2022', 'Dec 2022', 'Jan 2022', 'Feb 2022', 'March 2022', 'April 2022', 'May 2022', 'June 2022'],
+    axisBorder: {
+      color: '#d6ddea'
+    },
+    axisTicks: {
+      color: '#d6ddea'
+    }
+  },
+  yaxis: {
+    min: 0,
+    max: 20000
+  },
+  legend: {
+    position: 'top',
+    horizontalAlign: 'right',
+    floating: true,
+    offsetY: -25,
+    offsetX: -5
+  },
+  responsive: [{
+    breakpoint: 5000,
+    options: {
+      chart: {
+        toolbar: {
+          show: false
+        }
+      },
+      legend: {
+        show: false
+      }
+    }
+  }]
+};
+var chart = new ApexCharts(document.querySelector("#apex-line-1"), options);
+chart.render();
 
 /***/ }),
 
@@ -513,13 +500,13 @@ function ($) {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! D:\xampp\htdocs\scoring-validation\resources\js\pages\dashboard.init.js */"./resources/js/pages/dashboard.init.js");
-__webpack_require__(/*! D:\xampp\htdocs\scoring-validation\resources\scss\bootstrap.scss */"./resources/scss/bootstrap.scss");
-__webpack_require__(/*! D:\xampp\htdocs\scoring-validation\resources\scss\bootstrap-dark.scss */"./resources/scss/bootstrap-dark.scss");
-__webpack_require__(/*! D:\xampp\htdocs\scoring-validation\resources\scss\icons.scss */"./resources/scss/icons.scss");
-__webpack_require__(/*! D:\xampp\htdocs\scoring-validation\resources\scss\app-rtl.scss */"./resources/scss/app-rtl.scss");
-__webpack_require__(/*! D:\xampp\htdocs\scoring-validation\resources\scss\app.scss */"./resources/scss/app.scss");
-module.exports = __webpack_require__(/*! D:\xampp\htdocs\scoring-validation\resources\scss\app-dark.scss */"./resources/scss/app-dark.scss");
+__webpack_require__(/*! E:\xampp\htdocs\scoring-validation\resources\js\pages\dashboard.init.js */"./resources/js/pages/dashboard.init.js");
+__webpack_require__(/*! E:\xampp\htdocs\scoring-validation\resources\scss\bootstrap.scss */"./resources/scss/bootstrap.scss");
+__webpack_require__(/*! E:\xampp\htdocs\scoring-validation\resources\scss\bootstrap-dark.scss */"./resources/scss/bootstrap-dark.scss");
+__webpack_require__(/*! E:\xampp\htdocs\scoring-validation\resources\scss\icons.scss */"./resources/scss/icons.scss");
+__webpack_require__(/*! E:\xampp\htdocs\scoring-validation\resources\scss\app-rtl.scss */"./resources/scss/app-rtl.scss");
+__webpack_require__(/*! E:\xampp\htdocs\scoring-validation\resources\scss\app.scss */"./resources/scss/app.scss");
+module.exports = __webpack_require__(/*! E:\xampp\htdocs\scoring-validation\resources\scss\app-dark.scss */"./resources/scss/app-dark.scss");
 
 
 /***/ })

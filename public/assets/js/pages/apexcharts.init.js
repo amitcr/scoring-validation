@@ -268,9 +268,6 @@ function generateData1(baseval1, count, yrange) {
         }
       },
       yaxis: {
-        title: {
-          text: 'Temperature'
-        },
         min: 5,
         max: 40
       },
@@ -1471,7 +1468,7 @@ function ($) {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! D:\xampp\htdocs\scoring-validation\resources\js\pages\apexcharts.init.js */"./resources/js/pages/apexcharts.init.js");
+module.exports = __webpack_require__(/*! E:\xampp\htdocs\scoring-validation\resources\js\pages\apexcharts.init.js */"./resources/js/pages/apexcharts.init.js");
 
 
 /***/ })

@@ -344,7 +344,7 @@ function ($) {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! D:\xampp\htdocs\scoring-validation\resources\js\pages\widgets.init.js */"./resources/js/pages/widgets.init.js");
+module.exports = __webpack_require__(/*! E:\xampp\htdocs\scoring-validation\resources\js\pages\widgets.init.js */"./resources/js/pages/widgets.init.js");
 
 
 /***/ })

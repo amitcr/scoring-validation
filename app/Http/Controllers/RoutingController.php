@@ -19,6 +19,12 @@ class RoutingController extends Controller
         return view('dashboard');
     }
 
+
+    public function mismatch()
+    {
+        return view('mismatched');
+    }
+
     /**
      * Display a view based on first route param
      *
