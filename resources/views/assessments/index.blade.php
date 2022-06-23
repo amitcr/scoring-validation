@@ -3,6 +3,7 @@
 
 @section('css')
     <link href="{{ URL::asset('assets/libs/flatpickr/flatpickr.min.css') }}" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 @endsection
 
 @section('breadcrumb')
@@ -37,36 +38,37 @@
                             <h6 class="card-title  p-3 mb-0 header-title">Platform</h6>
                             <select class="custom-select m-1 mr-sm-2" id="inlineFormCustomSelectPref">
                                 <option selected>DISC Strengths</option>
-                                <option value="1">One</option>
-                                <option value="2">Two</option>
-                                <option value="3">Three</option>
+                                <option value="1">Four Temperaments</option>
+                                <option value="2">DISC Strengths</option>
+                                <option value="3">Four Temperaments</option>
                             </select>
                         </div>
                         <div class="col-2">
                             <h6 class="card-title  p-3 mb-0 header-title">Pattern</h6>
                             <select class="custom-select m-1 mr-sm-2" id="inlineFormCustomSelectPref">
                                 <option selected>The Executive (D-1)</option>
-                                <option value="1">One</option>
-                                <option value="2">Two</option>
-                                <option value="3">Three</option>
+                                <option value="1">The Executive (D-1)</option>
+                                <option value="2">The Strategist (D-S)</option>
+                                <option value="3">The Negotiator</option>
                             </select>
                         </div>
                         <div class="col-2">
                             <h6 class="card-title  p-3 mb-0 header-title">Country</h6>
                             <select class="custom-select m-1 mr-sm-2" id="inlineFormCustomSelectPref">
                                 <option selected>Canada</option>
-                                <option value="1">One</option>
-                                <option value="2">Two</option>
-                                <option value="3">Three</option>
+                                <option value="1">Canada</option>
+                                <option value="2">USA</option>
                             </select>
                         </div>
                         <div class="col-2">
                             <h6 class="card-title  p-3 mb-0 header-title">Name</h6>
-                            <input type="text" class="form-control mb-2 mr-sm-2" id="inlineFormInputName2" placeholder="Name">
+                            <input type="text" class="form-control mb-2 mr-sm-2" id="inlineFormInputName2"
+                                placeholder="Name">
                         </div>
                         <div class="col-4">
                             <h6 class="card-title  p-3 mb-0 header-title">Affiliate/Company</h6>
-                            <input type="text" class="form-control mb-2 mr-sm-2" id="inlineFormInputName2" placeholder="Enter Affiliate/Company">
+                            <input type="text" class="form mb-2 mr-sm-2" id="inlineFormInputName2"
+                                placeholder="Enter Affiliate/Company">
                             <button class="btn btn-primary" type="submit">Search</button>
                         </div>
 
@@ -86,6 +88,7 @@
                                 <th>Matching</th>
                                 <th>Country</th>
                                 <th>Date Created</th>
+                                <th>Action</th>
                             </tr>
                         </thead>
 
@@ -100,6 +103,8 @@
                                 <td>Yes</td>
                                 <td>USA</td>
                                 <td>06-12-2022</td>
+                                <td><a href="{{ route('assessments.assessment') }}"><i class="fa fa-eye"
+                                            style="size:30px;color:blue"></i></a></td>
                             </tr>
                             <tr>
                                 <td>2</td>
@@ -110,18 +115,23 @@
                                 <td>NO</td>
                                 <td>USA</td>
                                 <td>06-18-2022</td>
+                                <td><a href="{{ route('assessments.assessment') }}"><i class="fa fa-eye"
+                                            style="size:30px;color:blue"></i></a></td>
                             </tr>
                             <tr>
                                 <td>3</td>
                                 <td>Marton R. Dunn</td>
-                                <td>Four Temperaments<< /td>
+                                <td>Four Temperaments</td>
                                 <td>Wide Range Solutions</td>
                                 <td>The Strategist (D-S)</td>
                                 <td>NO</td>
+                                <td>USA</td>
                                 <td>05-16-2022</td>
+                                <td><a href="{{ route('assessments.assessment') }}"><i class="fa fa-eye"
+                                            style="size:30px;color:blue"></i></a></td>
                             </tr>
                             <tr>
-                                <td>3</td>
+                                <td>4</td>
                                 <td>Robert L. Benedett</td>
                                 <td>DISC Strengths</td>
                                 <td>MVS</td>
@@ -129,9 +139,11 @@
                                 <td>YES</td>
                                 <td>USA</td>
                                 <td>05-22-2022</td>
+                                <td><a href="{{ route('assessments.assessment') }}"><i class="fa fa-eye"
+                                            style="size:30px;color:blue"></i></a></td>
                             </tr>
                             <tr>
-                                <td>4</td>
+                                <td>5</td>
                                 <td>Airi Satou</td>
                                 <td>Four Temperaments</td>
                                 <td>Trinity LLC</td>
@@ -139,9 +151,11 @@
                                 <td>NO</td>
                                 <td>USA</td>
                                 <td>06-18-2022</td>
+                                <td><a href="{{ route('assessments.assessment') }}"><i class="fa fa-eye"
+                                            style="size:30px;color:blue"></i></a></td>
                             </tr>
                             <tr>
-                                <td>1</td>
+                                <td>6</td>
                                 <td>Mark T. Barton</td>
                                 <td>DISC Strengths</td>
                                 <td>Affiliate Company Unit</td>
@@ -149,9 +163,11 @@
                                 <td>Yes</td>
                                 <td>USA</td>
                                 <td>06-12-2022</td>
+                                <td><a href="{{ route('assessments.assessment') }}"><i class="fa fa-eye"
+                                            style="size:30px;color:blue"></i></a></td>
                             </tr>
                             <tr>
-                                <td>2</td>
+                                <td>7</td>
                                 <td>Carloyon R. Lee</td>
                                 <td>Four Temperaments</td>
                                 <td>Trinity LLC</td>
@@ -159,18 +175,23 @@
                                 <td>NO</td>
                                 <td>USA</td>
                                 <td>06-18-2022</td>
+                                <td><a href="{{ route('assessments.assessment') }}"><i class="fa fa-eye"
+                                            style="size:30px;color:blue"></i></a></td>
                             </tr>
                             <tr>
-                                <td>3</td>
+                                <td>8</td>
                                 <td>Marton R. Dunn</td>
-                                <td>Four Temperaments<< /td>
+                                <td>Four Temperaments</td>
                                 <td>Wide Range Solutions</td>
                                 <td>The Strategist (D-S)</td>
                                 <td>NO</td>
+                                <td>Canada</td>
                                 <td>05-16-2022</td>
+                                <td><a href="{{ route('assessments.assessment') }}"><i class="fa fa-eye"
+                                            style="size:30px;color:blue"></i></a></td>
                             </tr>
                             <tr>
-                                <td>3</td>
+                                <td>9</td>
                                 <td>Robert L. Benedett</td>
                                 <td>DISC Strengths</td>
                                 <td>MVS</td>
@@ -178,9 +199,11 @@
                                 <td>YES</td>
                                 <td>USA</td>
                                 <td>05-22-2022</td>
+                                <td><a href="{{ route('assessments.assessment') }}"><i class="fa fa-eye"
+                                            style="size:30px;color:blue"></i></a></td>
                             </tr>
                             <tr>
-                                <td>4</td>
+                                <td>10</td>
                                 <td>Airi Satou</td>
                                 <td>Four Temperaments</td>
                                 <td>Trinity LLC</td>
@@ -188,9 +211,11 @@
                                 <td>NO</td>
                                 <td>USA</td>
                                 <td>06-18-2022</td>
+                                <td><a href="{{ route('assessments.assessment') }}"><i class="fa fa-eye"
+                                            style="size:30px;color:blue"></i></a></td>
                             </tr>
                             <tr>
-                                <td>1</td>
+                                <td>11</td>
                                 <td>Mark T. Barton</td>
                                 <td>DISC Strengths</td>
                                 <td>Affiliate Company Unit</td>
@@ -198,9 +223,11 @@
                                 <td>Yes</td>
                                 <td>USA</td>
                                 <td>06-12-2022</td>
+                                <td><a href="{{ route('assessments.assessment') }}"><i class="fa fa-eye"
+                                            style="size:30px;color:blue"></i></a></td>
                             </tr>
                             <tr>
-                                <td>2</td>
+                                <td>12</td>
                                 <td>Carloyon R. Lee</td>
                                 <td>Four Temperaments</td>
                                 <td>Trinity LLC</td>
@@ -208,18 +235,23 @@
                                 <td>NO</td>
                                 <td>USA</td>
                                 <td>06-18-2022</td>
+                                <td><a href="{{ route('assessments.assessment') }}"><i class="fa fa-eye"
+                                            style="size:30px;color:blue"></i></a></td>
                             </tr>
                             <tr>
-                                <td>3</td>
+                                <td>13</td>
                                 <td>Marton R. Dunn</td>
-                                <td>Four Temperaments<< /td>
+                                <td>Four Temperaments</td>
                                 <td>Wide Range Solutions</td>
                                 <td>The Strategist (D-S)</td>
                                 <td>NO</td>
+                                <td>USA</td>
                                 <td>05-16-2022</td>
+                                <td><a href="{{ route('assessments.assessment') }}"><i class="fa fa-eye"
+                                            style="size:30px;color:blue"></i></a></td>
                             </tr>
                             <tr>
-                                <td>3</td>
+                                <td>14</td>
                                 <td>Robert L. Benedett</td>
                                 <td>DISC Strengths</td>
                                 <td>MVS</td>
@@ -227,9 +259,11 @@
                                 <td>YES</td>
                                 <td>USA</td>
                                 <td>05-22-2022</td>
+                                <td><a href="{{ route('assessments.assessment') }}"><i class="fa fa-eye"
+                                            style="size:30px;color:blue"></i></a></td>
                             </tr>
                             <tr>
-                                <td>4</td>
+                                <td>15</td>
                                 <td>Airi Satou</td>
                                 <td>Four Temperaments</td>
                                 <td>Trinity LLC</td>
@@ -237,6 +271,8 @@
                                 <td>NO</td>
                                 <td>USA</td>
                                 <td>06-18-2022</td>
+                                <td><a href="{{ route('assessments.assessment') }}"><i class="fa fa-eye"
+                                            style="size:30px;color:blue"></i></a></td>
                             </tr>
 
                         </tbody>

@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\AssessmentsController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
@@ -15,6 +15,7 @@ use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
 Auth::routes();
 
 Route::group(['middleware' => 'auth'], function () {
@@ -24,6 +25,6 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('{first}/{second}', 'RoutingController@secondLevel');
 });
 
-Route::get('mis', [DashboardController::class,'mis']);
-Route::get('in', [DashboardController::class,'in']);
-Route::get('all', [DashboardController::class,'all']);
+Route::get('assessments', [AssessmentsController::class, 'index'])->name('assessments');
+Route::get('assessments/mismatched', [AssessmentsController::class, 'mismatchedAssessments'])->name('assessments.mismatched');
+Route::get('assessment', [AssessmentsController::class, 'individualAssessments'])->name('assessments.assessment');

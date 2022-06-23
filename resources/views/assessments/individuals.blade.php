@@ -11,10 +11,11 @@
             <nav aria-label="breadcrumb" class="float-right mt-1">
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item"><a href="#">Home</a></li>
-                    <li class="breadcrumb-item active" aria-current="page">Individual Assessements</li>
+                    <li class="breadcrumb-item active" aria-current="page">Assessements</li>
+                    <li class="breadcrumb-item active" aria-current="page">Assessement</li>
                 </ol>
             </nav>
-            <h4 class="mb-1 mt-0">Individual Assessements</h4>
+            <h4 class="mb-1 mt-0">Assessement</h4>
         </div>
     </div>
     <div class="container-fluid">
@@ -87,32 +88,38 @@
                                             <th></th>
                                         </tr>
                                     </thead>
-
-
                                     <tbody>
                                         <tr>
-                                            <td>Tiger Nixon</td>
-                                            <td>System Architect</td>
-                                            <td>2011/04/25</td>
-                                            <td>$320,800</td>
+                                            <td>-Brave</td>
+                                            <td>-Decisive</td>
+                                            <td>-Film</td>
+                                            <td>-Strong will power</td>
                                         </tr>
                                         <tr>
-                                            <td>Garrett Winters</td>
-                                            <td>Accountant</td>
-                                            <td>2011/07/25</td>
-                                            <td>$170,750</td>
+                                            <td>-Dominant</td>
+                                            <td>-Fearless</td>
+                                            <td>-Direct</td>
                                         </tr>
                                         <tr>
-                                            <td>Ashton Cox</td>
-                                            <td>Junior Technical Author</td>
-                                            <td>2009/01/12</td>
-                                            <td>$86,000</td>
+                                            <td>-Argumentative</td>
+                                            <td>-Force of charactor</td>
                                         </tr>
                                         <tr>
-                                            <td>Cedric Kelly</td>
-                                            <td>Senior Javascript Developer</td>
-                                            <td>2012/03/29</td>
-                                            <td>$433,060</td>
+
+                                            <td>-Unconquerable</td>
+                                            <td>-Bold</td>
+
+                                        </tr>
+                                        <tr>
+                                            <td>-Restless</td>
+                                            <td>-Likes pressure</td>
+                                        </tr>
+                                        <tr>
+                                            <td>-Self-reliant</td>
+                                            <td>-Easily annoyed</td>
+                                        </tr>
+                                        <tr>
+                                            <td>-Pioneering</td>
                                         </tr>
                                     </tbody>
                                 </table>
@@ -132,26 +139,37 @@
                                             <th></th>
                                         </tr>
                                     </thead>
-
-
                                     <tbody>
                                         <tr>
-                                            <td>Tiger Nixon</td>
-                                            <td>System Architect</td>
-                                            <td>2011/04/25</td>
-                                            <td>$320,800</td>
+                                            <td>-Easily excited</td>
+                                            <td>-Sociable</td>
+                                            <td>-Articulate</td>
+                                            <td>-Spontaneous</td>
                                         </tr>
                                         <tr>
-                                            <td>Garrett Winters</td>
-                                            <td>Accountant</td>
-                                            <td>2011/07/25</td>
-                                            <td>$170,750</td>
+                                            <td>-Entering</td>
+                                            <td>-Fearless</td>
+                                            <td>-Impulsive</td>
+                                            <td>-Poised</td>
                                         </tr>
                                         <tr>
-                                            <td>Ashton Cox</td>
-                                            <td>Junior Technical Author</td>
-                                            <td>2009/01/12</td>
-                                            <td>$86,000</td>
+                                            <td></td>
+                                            <td></td>
+                                            <td>-Trusting</td>
+                                            <td>-Jovial</td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td></td>
+                                            <td>-Light-hearted</td>
+                                            <td>-Affectionate</td>
+
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td></td>
+                                            <td>-Approachable</td>
+                                            <td>-Playful</td>
                                         </tr>
                                     </tbody>
                                 </table>
@@ -171,29 +189,108 @@
                                             <th></th>
                                         </tr>
                                     </thead>
-
-
                                     <tbody>
                                         <tr>
-                                            <td>Tiger Nixon</td>
-                                            <td>System Architect</td>
-                                            <td>2011/04/25</td>
-                                            <td>$320,800</td>
+                                            <td>-Submissive</td>
+                                            <td>-Stubborn</td>
+                                            <td>-Patient</td>
+                                            <td>-Tolerant</td>
                                         </tr>
                                         <tr>
-                                            <td>Garrett Winters</td>
-                                            <td>Accountant</td>
-                                            <td>2011/07/25</td>
-                                            <td>$170,750</td>
+                                            <td>-Even-tempered</td>
+                                            <td>-Stable</td>
+                                            <td>-Amiable</td>
+                                            <td>-Qulet</td>
                                         </tr>
                                         <tr>
-                                            <td>Ashton Cox</td>
-                                            <td>Junior Technical Author</td>
-                                            <td>2009/01/12</td>
-                                            <td>$86,000</td>
+                                            <td>-Kind</td>
+                                            <td>-Soft-spoken</td>
+                                            <td>-Contened</td>
+                                            <td>-Service oriented</td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td></td>
+                                            <td>-Accommodating</td>
+                                            <td>-Possessive</td>
                                         </tr>
                                     </tbody>
                                 </table>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div class="card-body bg-success">
+                                <h4 class="header-title m-1 text-light text-center">C(MELANCHOLY)</h4>
+                            </div>
+                            <div class="table-responsive">
+                                <table class="table mb-0">
+                                    <thead>
+                                        <tr>
+                                            <th>Most words</th>
+                                            <th></th>
+                                            <th>Least words</th>
+                                            <th></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>-Contemplative</td>
+                                            <td>-Cautions</td>
+                                            <td>-Strict</td>
+                                            <td>-Thoughtful</td>
+                                        </tr>
+                                        <tr>
+                                            <td>-Well-disciplined</td>
+                                            <td>-Quality oriented</td>
+                                            <td>-Tractful</td>
+                                            <td>-Anticipates problems</td>
+                                        </tr>
+                                        <tr>
+                                            <td>-Introspective</td>
+                                            <td>-Percise</td>
+                                            <td>-Insightful</td>
+                                            <td>-Careful</td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td></td>
+                                            <td>-Diplomatic</td>
+                                            <td></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-xl-4 col-sm-6">
+                                    <div class="card-body bg-warning">
+                                        <h4 class="header-title text-light text-center">SOCIAL</h4>
+                                    </div>
+                                    <h1 class="header text-center">DISC</h1>
+                                    <canvas id="s-Chart" style="width:100%;height:400px;max-width:600px"></canvas>
+                                    <h5 class="header text-center">CHOLERIC/MELANCHOLY</h5>
+                                    <h5 class="header text-center">Strategist</h5>
+                                </div>
+                                <div class="col-xl-4 col-sm-6">
+                                    <div class="card-body bg-success">
+                                        <h4 class="header-title text-light text-center">UNDER PRESSURE</h4>
+                                    </div>
+                                    <h1 class="header text-center">DISC</h1>
+                                    <canvas id="under-pressure-Chart"
+                                        style="width:100%;height:400px;max-width:600px"></canvas>
+                                    <h5 class="header text-center">CHOLERIC/PHLEGMATIC</h5>
+                                    <h5 class="header text-center">Director</h5>
+                                </div>
+                                <div class="col-xl-4 col-sm-6">
+                                    <div class="card-body bg-secondary">
+                                        <h4 class="header-title text-light text-center">PREFERENCE</h4>
+                                    </div>
+                                    <h1 class="header text-center">DISC</h1>
+                                    <canvas id="preference-Chart" style="width:100%;height:400px;max-width:600px"></canvas>
+                                    <h5 class="header text-center">CHOLERIC/MELANCHOLY</h5>
+                                    <h5 class="header text-center">Strategist</h5>
+                                </div>
                             </div>
                         </div>
                     </div>

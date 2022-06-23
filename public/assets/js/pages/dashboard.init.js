@@ -93,6 +93,8 @@
 /*! no static exports found */
 /***/ (function(module, exports) {
 
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
 /*
 Template Name: Shreyu - Responsive Bootstrap 4 Admin Dashboard
 Author: CoderThemes
@@ -424,6 +426,196 @@ var options = {
 };
 var chart = new ApexCharts(document.querySelector("#apex-line-1"), options);
 chart.render();
+var options = {
+  chart: {
+    height: 320,
+    type: 'pie'
+  },
+  series: [40, 45, 35, 30],
+  labels: ["Canada", "Usa", "United Kingdom", "South Africa"],
+  legend: {
+    show: true,
+    position: 'bottom',
+    horizontalAlign: 'center',
+    verticalAlign: 'middle',
+    floating: false,
+    fontSize: '14px',
+    offsetX: 0,
+    offsetY: -10
+  },
+  responsive: [{
+    breakpoint: 600,
+    options: {
+      chart: {
+        height: 240
+      },
+      legend: {
+        show: false
+      }
+    }
+  }]
+};
+var chart = new ApexCharts(document.querySelector("#myChart"), options);
+chart.render();
+var xValues = [50, 60, 70, 80, 85];
+var yValues = [5.3, 2.5, 3.5, 4.5];
+new Chart("s-Chart", {
+  type: "line",
+  data: {
+    labels: xValues,
+    datasets: [_defineProperty({
+      fill: false,
+      lineTension: 0,
+      backgroundColor: "rgba(0,0,255,1.0)",
+      borderColor: "rgba(0,0,255,0.1)",
+      data: xValues
+    }, "data", yValues)]
+  },
+  options: {
+    legend: {
+      display: false
+    },
+    scales: {
+      yAxes: [{
+        ticks: {
+          min: 0,
+          max: 7
+        }
+      }],
+      xAxes: [{
+        ticks: {
+          min: 50,
+          max: 85
+        }
+      }]
+    }
+  }
+});
+var xValues = [50, 60, 70, 80, 85];
+var yValues = [3.8, 0.9, 2.6, 2.4];
+new Chart("under-pressure-Chart", {
+  type: "line",
+  data: {
+    labels: xValues,
+    datasets: [_defineProperty({
+      fill: false,
+      lineTension: 0,
+      backgroundColor: "rgba(0,0,255,1.0)",
+      borderColor: "rgba(0,0,255,0.1)",
+      data: xValues
+    }, "data", yValues)]
+  },
+  options: {
+    legend: {
+      display: false
+    },
+    scales: {
+      yAxes: [{
+        ticks: {
+          min: 0,
+          max: 7
+        }
+      }],
+      xAxes: [{
+        ticks: {
+          min: 50,
+          max: 85
+        }
+      }]
+    }
+  }
+});
+var xValues = [50, 60, 70, 80, 85];
+var yValues = [4.5, 1.5, 3, 3.4];
+new Chart("preference-Chart", {
+  type: "line",
+  data: {
+    labels: xValues,
+    datasets: [_defineProperty({
+      fill: false,
+      lineTension: 0,
+      backgroundColor: "rgba(0,0,255,1.0)",
+      borderColor: "rgba(0,0,255,0.1)",
+      data: xValues
+    }, "data", yValues)]
+  },
+  options: {
+    legend: {
+      display: false
+    },
+    scales: {
+      yAxes: [{
+        ticks: {
+          min: 0,
+          max: 7
+        }
+      }],
+      xAxes: [{
+        ticks: {
+          min: 50,
+          max: 85
+        }
+      }]
+    }
+  }
+}); // Sales graph chart
+
+var salesGraphChartCanvas = $('#social-chart').get(0).getContext('2d'); // $('#revenue-chart').get(0).getContext('2d');
+
+var salesGraphChartData = {
+  labels: ['2011 Q1', '2011 Q2', '2011 Q3', '2011 Q4', '2012 Q1', '2012 Q2', '2012 Q3', '2012 Q4', '2013 Q1', '2013 Q2'],
+  datasets: [{
+    label: 'Digital Goods',
+    fill: false,
+    borderWidth: 2,
+    lineTension: 0,
+    spanGaps: true,
+    borderColor: '#efefef',
+    pointRadius: 3,
+    pointHoverRadius: 7,
+    pointColor: '#efefef',
+    pointBackgroundColor: '#efefef',
+    data: [2666, 2778, 4912, 3767, 6810, 5670, 4820, 15073, 10687, 8432]
+  }]
+};
+var salesGraphChartOptions = {
+  maintainAspectRatio: false,
+  responsive: true,
+  legend: {
+    display: false
+  },
+  scales: {
+    xAxes: [{
+      ticks: {
+        fontColor: '#efefef'
+      },
+      gridLines: {
+        display: false,
+        color: '#efefef',
+        drawBorder: false
+      }
+    }],
+    yAxes: [{
+      ticks: {
+        stepSize: 5000,
+        fontColor: '#efefef'
+      },
+      gridLines: {
+        display: true,
+        color: '#efefef',
+        drawBorder: false
+      }
+    }]
+  }
+}; // This will get the first returned node in the jQuery collection.
+// eslint-disable-next-line no-unused-vars
+
+var salesGraphChart = new Chart(salesGraphChartCanvas, {
+  // lgtm[js/unused-local-variable]
+  type: 'line',
+  data: salesGraphChartData,
+  options: salesGraphChartOptions
+});
 
 /***/ }),
 

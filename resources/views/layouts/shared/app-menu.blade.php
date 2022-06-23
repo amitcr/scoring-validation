@@ -4,7 +4,7 @@
     <li>
         <a href="/">
             <i data-feather="home"></i>
-            <span class="badge badge-success float-right">1</span>
+            {{-- <span class="badge badge-success float-right">1</span> --}}
             <span> Dashboard </span>
         </a>
     </li>
@@ -18,14 +18,14 @@
 
         <ul class="nav-second-level" aria-expanded="false">
             <li>
-                <a href="/apps/email/inbox">All</a>
+                <a href="{{ route('assessments') }}">All</a>
             </li>
             <li>
-                <a href="/apps/email/read">Mismatched</a>
+                <a href="{{ route('assessments.mismatched') }}">Mismatched</a>
             </li>
-            <li>
-                <a href="/apps/email/compose">Individual</a>
-            </li>
+            {{-- <li>
+                <a href="{{route('assessments.individuals')}}">Individual</a>
+            </li> --}}
         </ul>
     </li>
 </ul>

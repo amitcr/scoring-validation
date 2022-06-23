@@ -22,7 +22,7 @@
                                 Completed Assessments: </label>
                         </div>
                         <div class="col text-right">
-                            <button class="btn btn-primary" id="btn-new-event"><i class="uil-plus mr-1"></i>55515</button>
+                            <button class="btn btn-primary" id="btn-new-event">55515</button>
                         </div>
                     </div>
                 </div> <!-- end card body-->
@@ -53,8 +53,9 @@
                         <h4 class="header-title m-2 text-light">Matching %</h4>
                     </div>
                     <div id="dashboard-matching-chart" class="apex-charts mt-3" dir="ltr"></div>
-                    <div class="btn">
-                        <button type="button" class="btn btn-primary btn-sm width-50">View all</button>
+                    <div class="col-md-12 text-center mb-1">
+                        <a href="{{ route('assessments.mismatched') }}" class="btn btn-primary btn-sm width-50">View
+                            all</a>
                     </div>
                 </div>
             </div>

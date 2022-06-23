@@ -19,12 +19,6 @@ class RoutingController extends Controller
         return view('dashboard');
     }
 
-
-    public function mismatch()
-    {
-        return view('mismatched');
-    }
-
     /**
      * Display a view based on first route param
      *
@@ -39,8 +33,8 @@ class RoutingController extends Controller
      * second level route
      */
     public function secondLevel($first, $second)
-    {        
-        return view($first.'.'.$second);
+    {
+        return view($first . '.' . $second);
     }
 
     /**
@@ -48,7 +42,7 @@ class RoutingController extends Controller
      */
     public function thirdLevel($first, $second, $third)
     {
-        return view($first.'.'.$second.'.'.$third);
+        return view($first . '.' . $second . '.' . $third);
     }
 
     /**
